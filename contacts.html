@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <button class="menu-button" id='siderBar 'onclick="toggleSidebar()"><img src="./assets/img/Burger.svg" alt="☰"></button>
+        <div class="header__logo">
+            <a href="./index.html"><img src="./assets/img/logoVDK.svg" alt="!"></a>
+        </div>
+        <div class="header__buttons">
+            <button class="header__SignUp_button" onclick="openModal('registerModal')">Зарегистрироваться</button>
+            <button class="header__LogIn_button" onclick="openModal('loginModal')">Войти</button>
+            <img class="header__LogIn_icon" src="./assets/img/LogIn.svg" onclick="openModal('loginModal')" alt="!">
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./attractions.html">Достопримечательности</a></li>
+            <li><a href="./contats.html">Контакты</a></li>
+        </ul>
+    </div>
+
+    <section class="main">
+        <div id="registerModal" class="modal">
+            <div class="modal-content modal-SignUp">
+                <span class="close" onclick="closeModal('registerModal')">&times;</span>
+                <h2>Регистрация</h2>
+                <form>
+                    <label for="name" class="modal__SignUp-Input">Ваше имя</label>
+                    <input type="text" id="name" placeholder="Александр" name="name" required>
+                    <label for="email">Адрес эл.почты</label>
+                    <input type="email" id="email" placeholder="youremail@mail.com" name="email" required>
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" minlength="8" name="password" required>
+                    <label for="confirmPassword">Подтверждение пароля</label>
+                    <input type="password" id="confirmPassword" minlength="8" name="confirmPassword" required>
+                    <button type="submit" class="modal-button">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    
+
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                <h2>Вход</h2>
+                <form>
+                    <label for="loginEmail">Адрес эл.почты</label>
+                    <input type="email" id="loginEmail" placeholder="youremail@mail.com" name="loginEmail" required>
+                    <label for="loginPassword">Пароль</label>
+                    <input type="password" id="loginPassword" minlength="8" name="loginPassword" required>
+                    <button type="submit" class="modal-button">Войти</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="./assets/img/VK.svg" alt="">
+            <img src="./assets/img/TG.svg" alt="">
+        </div>
+        <div class="contact__button-container">
+            <button class="contact__button" onclick="openModal('contactModal')">связаться с нами</button>
+        </div>
+
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('contactModal')">&times;</span>
+                <h2 class="modal-title">Заявка на экскурсию</h2>
+                <form>
+                    <label for="contactEmail">Адрес эл.почты</label>
+                    <input type="email" id="contactEmail" placeholder="youremail@mail.com" name="contactEmail" required>
+                    <label for="contactData">ФИО</label>
+                    <input type="text" id="contactData" placeholder="Иванов Иван Иванович" name="contactData" required>
+                    <button type="submit" class="modal-button">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="footer__menu">
+                <li class="footer__menu-item"><a href="./contacts.html">контакты</a></li>
+                <li class="footer__menu-item"><a href="./attractions.html">достопримечательности</a></li>
+                <li class="footer__menu-item"><a href="./unuviable">наша политика</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

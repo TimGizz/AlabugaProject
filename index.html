@@ -1,0 +1,110 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VDK</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        
+    </head>
+    <body>
+        <header class="header">
+            <button class="menu-button" id='siderBar 'onclick="toggleSidebar()"><img src="./assets/img/Burger.svg" alt="☰"></button>
+            <div class="header__logo">    
+                <a href="./index.html"><img src="./assets/img/logoVDK.svg" alt="!"></a>
+            </div>
+            <div class="header__buttons">
+                <button class="header__SignUp_button" onclick="openModal('registerModal')">Зарегистрироваться</button>
+                <button class="header__LogIn_button" onclick="openModal('loginModal')">Войти</button>
+                <img class="header__LogIn_icon" src="./assets/img/LogIn.svg" onclick="openModal('loginModal')" alt="!">
+            </div>
+        </header>
+
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./attractions.html">Достопримечательности</a></li>
+                <li><a href="./contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+
+        <section class="main">
+            <div id="registerModal" class="modal">
+                <div class="modal-content modal-SignUp">
+                    <span class="close" onclick="closeModal('registerModal')">&times;</span>
+                    <h2>Регистрация</h2>
+                    <form>
+                        <label for="name" class="modal__SignUp-Input">Ваше имя</label>
+                        <input type="text" id="name" placeholder="Александр" name="name" required>
+                        <label for="email">Адрес эл.почты</label>
+                        <input type="email" id="email" placeholder="youremail@mail.com" name="email" required>
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" minlength="8" name="password" required>
+                        <label for="confirmPassword">Подтверждение пароля</label>
+                        <input type="password" id="confirmPassword" minlength="8" name="confirmPassword" required>
+                        <button type="submit" class="modal-button">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        
+    
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                    <h2>Вход</h2>
+                    <form>
+                        <label for="loginEmail">Адрес эл.почты</label>
+                        <input type="email" id="loginEmail" placeholder="youremail@mail.com" name="loginEmail" required>
+                        <label for="loginPassword">Пароль</label>
+                        <input type="password" id="loginPassword" minlength="8" name="loginPassword" required>
+                        <button type="submit" class="modal-button">Войти</button>
+                    </form>
+                </div>
+            </div>
+        <div class="main_titles">
+            <h1 class="main_titles__title">Владивосток</h1>
+            <p class="main_titles__subtitle">столица дальнего востока
+            </p>
+        </div>     
+        </div>
+            <div class="text_blocks">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide" id="slide1">
+                            <img src="./assets/img/imageVDK-1.png" alt="Image 1">
+                        </div>
+                        <div class="slide" id="slide2">
+                            <img src="./assets/img/imageVDK-2.png" alt="Image 2">
+                        </div>
+                        <div class="slide" id="slide3">
+                            <img src="./assets/img/imageVDK-3.png" alt="Image 3">
+                        </div>
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="text_blocks__dream-city">   
+                    <p class="text">Владивосток — это волшебный уголок России, где сливаются воедино величие природы и динамика современного города. Представьте себе утренний туман, окутывающий залив, когда первые лучи солнца пробиваются сквозь облака, создавая незабываемую атмосферу. Город, раскинувшийся на холмах, словно живописная картина, манит к себе своими яркими огнями и романтичными улочками.</p>
+                </div>
+                <div class="text_blocks__western-city">   
+                    <p class="text">Владивосток — культурный центр Дальнего Востока, где традиции встречаются с современностью. Приморский краевой театр драмы и филармония радуют зрителей яркими спектаклями и концертами. Уличное искусство и граффити придают городу уникальный облик. Фестивали, такие как международный кинофестиваль, привлекают внимание к новым талантам. Владивосток вдохновляет всех, кто ценит культуру и искусство.</p>
+                </div>
+            </div>
+            <script src="./assets/js/script.js"></script>
+        </section>
+        <section class="map">
+            <div class="map__div">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad8d90744bf2b6325de3d02de06f4ec3f06b9a15fee4a93797960876a00755607&amp;width=842&amp;height=404&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </section>
+        <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a href="./contacts.html">контакты</a></li>
+                    <li class="footer__menu-item"><a href="./attractions.html">достопримечательности</a></li>
+                    <li class="footer__menu-item"><a href="./unuviable">наша политика</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+    </html>
